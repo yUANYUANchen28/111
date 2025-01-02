@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobBee - Job Listings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .modal {
+      display: none;
+    }
+    .modal.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+      <h1 class="text-xl font-bold">JobBee</h1>
+      <div class="hidden md:flex space-x-8 relative">
+        <a href="homepage.html" class="text-gray-600 hover:text-blue-600">Home</a>
+        <a href="Create _副本.html" class="text-gray-600 hover:text-blue-600">Find Job</a>
+        <div class="relative group">
+          <button class="text-gray-600 hover:text-blue-600 focus:outline-none" onclick="window.location.href='opening .html'">Employers</button>
+
+          <!-- Dropdown Menu -->
+          <div class="absolute hidden group-hover:flex flex-col bg-white shadow-md mt-2 w-40 border border-gray-200">
+            <a href="opening .html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Employers</a>
+            <a href="Create _副本.html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Employed</a>
+          </div>
+        </div>
+        <a href="lastt111  .html" class="text-gray-600 hover:text-blue-600">Social and Contacts</a>
+      </div>
+    </div>
+    <div class="flex items-center space-x-4">
+      <span class="text-gray-600">+60 102897965</span>
+      <img src="../youtube图标 - Google 搜索_files/unnamed.jpg" alt="User" class="rounded-full">
+    </div>
+  </div>
+</nav>
+
+		  
+
+  <!-- Main Container -->
+  <div id="form-page" class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8 mt-8">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-8">
+      <div class="flex items-center space-x-3">
+        <img src="../截屏2025-01-02 上午8.12.37.png" alt="JobBee Logo" class="h-10 w-10 rounded-full">
+        <h1 class="text-2xl font-bold text-gray-900">JobBee</h1>
+      </div>
+      <div>
+       <p class="text-sm text-gray-500 mb-1">Setup Progress</p>
+        <div class="w-full bg-gray-200 h-2 rounded-full relative">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 50%;"></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-1 text-right">50% Completed</p>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="flex items-center space-x-8 border-b mb-6">
+      <button class="text-sm font-medium text-blue-600 border-b-2 border-blue-600 pb-2 focus:outline-none">Social Media Profile</button>
+      <button class="text-sm font-medium text-gray-500 hover:text-blue-600 hover:border-blue-600 pb-2 border-b-2 border-transparent focus:outline-none">Contact</button>
+    </div>
+
+    <!-- Form Section -->
+    <form>
+      <div class="space-y-6">
+
+        <!-- Social Link 1 -->
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-2 w-1/4">
+            <img src="../facebook-2815970_1280.jpg" alt="Facebook" class="h-6 w-6">
+            <span class="font-medium text-gray-800">Facebook</span>
+          </div>
+          <input type="url" placeholder="Profile link/url..." class="flex-1 border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+          <button type="button" class="text-gray-500 hover:text-red-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Social Link 2 -->
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-2 w-1/4">
+            <img src="../下载 (5).png" alt="Twitter" class="h-6 w-6">
+            <span class="font-medium text-gray-800">Twitter</span>
+          </div>
+          <input type="url" placeholder="Profile link/url..." class="flex-1 border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+          <button type="button" class="text-gray-500 hover:text-red-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Social Link 3 -->
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-2 w-1/4">
+            <img src="../下载.jpeg" alt="Instagram" class="h-6 w-6">
+            <span class="font-medium text-gray-800">Instagram</span>
+          </div>
+          <input type="url" placeholder="Profile link/url..." class="flex-1 border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+          <button type="button" class="text-gray-500 hover:text-red-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Social Link 4 -->
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-2 w-1/4">
+            <img src="../下载 (4).png" alt="YouTube" class="h-6 w-6">
+            <span class="font-medium text-gray-800">YouTube</span>
+          </div>
+          <input type="url" placeholder="Profile link/url..." class="flex-1 border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+          <button type="button" class="text-gray-500 hover:text-red-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+<!-- Save Button -->
+<div class="mt-6">
+  <button 
+  type="button" 
+  class="w-full bg-blue-600 text-white py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+  onclick="location.href='lastt1  .html'"
+>
+  Save&Next
+</button>
+
+</div>
+</form>
+</div>
+
+
+
+</body>
+</html>
+
+<footer class="footer" style="background-color: #000000; color: #ffffff; padding: 50px 20px;">
+    <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1200px; margin: auto;">
+        <!-- Company Info -->
+        <div class="footer-column" style="line-height: 1.6;">
+            <h3 style="margin-bottom: 20px; font-size: 16px; font-weight: bold;">JobBee</h3>
+            <p class="contact" style="font-size: 14px;">
+                Call now: <a href="tel:+60102687965" style="color: #a0a0a0; text-decoration: none;">+60 102687965</a>
+            </p>
+            <p class="contact" style="font-size: 14px; color: #a0a0a0;">
+                6391 Elgin St. Celina, Delaware 10299, New York, United States of America
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column" style="line-height: 1.6;">
+            <h3 style="margin-bottom: 20px; font-size: 16px; font-weight: bold;">Quick Link</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">About</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Contact</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Pricing</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Blog</a></li>
+            </ul>
+        </div>
+
+        <!-- Job Seekers -->
+        <div class="footer-column" style="line-height: 1.6;">
+            <h3 style="margin-bottom: 20px; font-size: 16px; font-weight: bold;">Employed</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Browse Jobs</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Browse Employers</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Candidate Dashboard</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Saved Jobs</a></li>
+            </ul>
+        </div>
+
+        <!-- Employers -->
+        <div class="footer-column" style="line-height: 1.6;">
+            <h3 style="margin-bottom: 20px; font-size: 16px; font-weight: bold;">Employers</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Post a Job</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Browse Candidates</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Employers Dashboard</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Applications</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column" style="line-height: 1.6;">
+            <h3 style="margin-bottom: 20px; font-size: 16px; font-weight: bold;">Support</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">FAQs</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Privacy Policy</a></li>
+                <li><a href="#" style="color: #a0a0a0; text-decoration: none; font-size: 14px;">Terms & Conditions</a></li>
+            </ul>
+            <!-- Social Media Links -->
+            <div class="social-icons" style="margin-top: 20px;">
+                <a href="https://www.facebook.com/r.php" target="_blank" style="color: #a0a0a0; font-size: 14px; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <i class="fab fa-facebook" style="font-size: 18px;"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/accounts/emailsignup/" target="_blank" style="color: #a0a0a0; font-size: 14px; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <i class="fab fa-instagram" style="font-size: 18px;"></i> Instagram
+                </a>
+                <a href="https://www.youtube.com/signup" target="_blank" style="color: #a0a0a0; font-size: 14px; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <i class="fab fa-youtube" style="font-size: 18px;"></i> YouTube
+                </a>
+                <a href="https://twitter.com/i/flow/signup" target="_blank" style="color: #a0a0a0; font-size: 14px; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <i class="fab fa-twitter" style="font-size: 18px;"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom" style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; font-size: 12px; color: #a0a0a0;">
+        &copy; 2024 JobBee - Job Portal. All rights Reserved
+    </div>
+</footer>

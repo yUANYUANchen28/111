@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobBee - Job Listings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .modal {
+      display: none;
+    }
+    .modal.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+      <h1 class="text-xl font-bold">JobBee</h1>
+      <div class="hidden md:flex space-x-8 relative">
+        <a href="homepage.html" class="text-gray-600 hover:text-blue-600">Home</a>
+        <a href="Create _副本.html" class="text-gray-600 hover:text-blue-600">Find Job</a>
+        <div class="relative group">
+          <button class="text-gray-600 hover:text-blue-600 focus:outline-none" onclick="window.location.href='opening .html'">Employers</button>
+
+          <!-- Dropdown Menu -->
+          <div class="absolute hidden group-hover:flex flex-col bg-white shadow-md mt-2 w-40 border border-gray-200">
+            <a href="opening .html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Employers</a>
+            <a href="jobfind.html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Employed</a>
+          </div>
+        </div>
+        <a href="lastt111  .html" class="text-gray-600 hover:text-blue-600">Social and Contacts</a>
+      </div>
+    </div>
+    <div class="flex items-center space-x-4">
+      <span class="text-gray-600">+60 102897965</span>
+      <img src="../youtube图标 - Google 搜索_files/unnamed.jpg" alt="User" class="rounded-full">
+    </div>
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+    <div class="max-w-lg">
+      <h1 class="text-4xl font-bold text-gray-800">Find a job that works like a bee, build like a pro.</h1>
+      <p class="mt-4 text-gray-600">Your abilities deserve a better platform to discover your next job!</p>
+      <div class="mt-6 flex space-x-4">
+        <div class="relative w-full">
+          <select class="px-4 py-2 border border-gray-300 rounded-md w-full">
+            <option value="India">🇮🇳 India</option>
+            <option value="USA">🇺🇸 USA</option>
+            <option value="UK">🇬🇧 UK</option>
+            <option value="Germany">🇩🇪 Germany</option>
+            <option value="China">🇨🇳 China</option>
+            <option value="Japan">🇯🇵 Japan</option>
+          </select>
+        </div>
+        <div class="relative w-full">
+          <div contenteditable="true" class="px-4 py-2 border border-gray-300 rounded-md w-full pl-10 text-black">
+  &nbsp; </div>
+
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-2.5 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+          </svg>
+        </div>
+        <div class="relative w-full">
+         <input 
+    id="locationInput" 
+    type="text" 
+    placeholder="Your Location" 
+    class="px-4 py-2 border border-gray-300 rounded-md w-full pl-10 text-black"
+    style="color: black;">
+
+          <a href="https://www.google.com/maps" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-2.5 h-5 w-5 text-gray-400 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2C8.686 2 6 4.686 6 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.314-2.686-6-6-6z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </a>
+        </div>
+        <a href="jobfind.html" class="bg-blue-600 text-white px-4 py-2 rounded-md w-full">
+  <strong>Find The Job</strong>
+</a>
+
+
+
+
+      </div>
+      <p class="mt-4 text-sm text-gray-500">Suggestion: Designer, Programming, <span class="text-blue-600">Digital Marketing</span>, Video, Animation.</p>
+    </div>
+    <div>
+      <img src="../商务照片｜分享上班活力音乐💼_1_庆子闯天下_来自小红书网页版.jpg" width="400" height="1080" alt=""/> </div>
+  </div>
+</section>
+
+<script>
+  document.querySelector('#locationInput + a svg').addEventListener('click', () => {
+    const location = document.getElementById('locationInput').value;
+    if (location) {
+      window.open(`https://www.google.com/maps/search/${encodeURIComponent(location)}`, '_blank');
+    } else {
+      alert('Please enter a location to search.');
+    }
+  });
+</script>
+
+<!-- Call to Action -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-gray-100 p-8 rounded-md">
+      <h3 class="text-2xl font-bold text-gray-800">Become an Employee</h3>
+      <p class="text-gray-500 mt-4">To become a professional in a field or land your dream job, you need to define your goals, enhance your skills, gain experience, build your personal brand, expand your network, conduct a precise job search, and maintain a mindset of continuous learning.</p>
+      <button onclick="location.href='Sign in .html';" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md">Register Now</button>
+    </div>
+    <div class="bg-blue-600 p-8 rounded-md text-white">
+      <h3 class="text-2xl font-bold">Become an Employer</h3>
+      <p class="mt-4">Becoming an employer involves developing a business plan, choosing the right legal structure, registering the business, setting up a payroll system, understanding labour regulations and recruiting staff effectively to ensure the company runs smoothly.</p>
+      <button onclick="location.href='Sign in .html';" class="mt-4 bg-white text-blue-600 px-6 py-2 rounded-md">Register Now</button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
+
+
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Most Popular Vacancies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8">Most Popular Vacancies</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Anesthesiologists</h2>
+        <p class="text-sm text-gray-500">45,904 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Surgeons</h2>
+        <p class="text-sm text-gray-500">50,364 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Obstetricians-Gynecologists</h2>
+        <p class="text-sm text-gray-500">4,339 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Maxillofacial Surgeons</h2>
+        <p class="text-sm text-gray-500">74,875 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Software Developer</h2>
+        <p class="text-sm text-gray-500">43,359 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Psychiatrists</h2>
+        <p class="text-sm text-gray-500">18,599 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Financial Manager</h2>
+        <p class="text-sm text-gray-500">61,391 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Management Analysis</h2>
+        <p class="text-sm text-gray-500">93,046 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Orthodontists</h2>
+        <p class="text-sm text-gray-500">20,079 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-blue-500 hover:underline cursor-pointer">Data Scientist</h2>
+        <p class="text-sm text-gray-500">28,200 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">IT Manager</h2>
+        <p class="text-sm text-gray-500">50,963 Open Positions</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900">Operations Research Analysis</h2>
+        <p class="text-sm text-gray-500">16,627 Open Positions</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- Statistics Section -->
+  <section class="bg-gray-50 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="flex flex-col items-center bg-white shadow-md p-6 rounded-lg">
+        <div class="bg-blue-100 p-4 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 13h18l-9-9-9 9z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mt-4">2,75,324</h3>
+        <p class="text-gray-500 mt-2">Live Job</p>
+      </div>
+      <div class="flex flex-col items-center bg-white shadow-md p-6 rounded-lg">
+        <div class="bg-blue-100 p-4 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M16 12H8" />
+            <path d="M12 16V8" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mt-4">98,374</h3>
+        <p class="text-gray-500 mt-2">Companies</p>
+      </div>
+      <div class="flex flex-col items-center bg-white shadow-md p-6 rounded-lg">
+        <div class="bg-blue-100 p-4 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21V13H4v8H2v-9a2 2 0 012-2h16a2 2 0 012 2v9h-2z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mt-4">39,48154</h3>
+        <p class="text-gray-500 mt-2">Candidates</p>
+      </div>
+      <div class="flex flex-col items-center bg-white shadow-md p-6 rounded-lg">
+        <div class="bg-blue-100 p-4 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5v14" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mt-4">9,592</h3>
+        <p class="text-gray-500 mt-2">New Jobs</p>
+      </div>
+    </div>
+  </section>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Footer Design</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .footer {
+            background-color: #181818;
+            padding: 50px 20px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .footer-column {
+            line-height: 1.6;
+        }
+        .footer h3 {
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .footer a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .contact {
+            font-size: 14px;
+            color: #a0a0a0;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin-right: 15px;
+            font-size: 14px;
+            color: #a0a0a0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ffffff;
+        }
+        .social-icons i {
+            font-size: 18px;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 12px;
+            color: #a0a0a0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>JobBee</h3>
+                <p class="contact">Call now: <a href="tel:+60102687965">+60 102687965</a></p>
+                <p class="contact">6391 Elgin St. Celina, Delaware 10299, New York, United States of America</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Link</h3>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Pricing</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-column">
+                <h3>Employed</h3>
+                <a href="#">Browse Jobs</a>
+                <a href="#">Browse Employers</a>
+                <a href="#">Candidate Dashboard</a>
+                <a href="#">Saved Jobs</a>
+            </div>
+            <div class="footer-column">
+                <h3>Employers</h3>
+                <a href="#">Post a Job</a>
+                <a href="#">Browse Candidates</a>
+                <a href="#">Employers Dashboard</a>
+                <a href="#">Applications</a>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <a href="#">FAQs</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/r.php" target="_blank">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/accounts/emailsignup/" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.youtube.com/signup" target="_blank">
+                        <i class="fab fa-youtube"></i> YouTube
+                    </a>
+                    <a href="https://twitter.com/i/flow/signup" target="_blank">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 JobBee - Job Portal. All rights Reserved
+        </div>
+    </footer>
+</body>
+</html>
+

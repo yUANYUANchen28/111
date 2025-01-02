@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobBee - Find Your Dream Job</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .hero {
+            background-color: #e3f2fd;
+            padding: 50px 20px;
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .hero h2 {
+            margin: 0 0 10px;
+            font-size: 2em;
+            color: #007bff;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .selector-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            margin-bottom: 30px;
+        }
+        select, input {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: auto;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .video-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .video-container iframe {
+            width: 300px;
+            height: 168px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JobBee</h1>
+    </header>
+    <div class="hero">
+        <h2>Find Your Dream Job</h2>
+        <p>Search jobs in your preferred language and country with ease.</p>
+    </div>
+    <div class="selector-container">
+        <h2 id="heading">Select Language, Country, and Search Jobs</h2>
+        <label for="language" id="language-label">Language:</label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="zh">Chinese</option>
+            <option value="fr">French</option>
+        </select>
+        <br>
+        <label for="country" id="country-label">Country:</label>
+        <select id="country">
+            <option value="us">United States</option>
+            <option value="cn">China</option>
+            <option value="es">Spain</option>
+            <option value="fr">France</option>
+        </select>
+        <br>
+        <div class="job-search">
+            <label for="job-title" id="job-title-label">Job Title:</label>
+            <input type="text" id="job-title" placeholder="e.g., Software Engineer">
+            <label for="job-location" id="job-location-label">Location:</label>
+            <input type="text" id="job-location" placeholder="e.g., New York">
+        </div>
+        <button id="submit">Submit</button>
+    </div>
+    <h2>Explore Career Opportunities</h2>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/O3m14PVOq_g" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/577RmriR-rQ" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/PnxBkOqThjI" allowfullscreen></iframe>
+    </div>
+    <footer>
+        <p>&copy; 2025 JobBee. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                heading: "Select Language, Country, and Search Jobs",
+                language: "Language:",
+                country: "Country:",
+                jobTitle: "Job Title:",
+                jobLocation: "Location:",
+                submit: "Submit"
+            },
+            es: {
+                heading: "Selecciona idioma, país y busca empleos",
+                language: "Idioma:",
+                country: "País:",
+                jobTitle: "Título del trabajo:",
+                jobLocation: "Ubicación:",
+                submit: "Enviar"
+            },
+            zh: {
+                heading: "选择语言、国家和搜索工作",
+                language: "语言:",
+                country: "国家:",
+                jobTitle: "职位名称:",
+                jobLocation: "地点:",
+                submit: "提交"
+            },
+            fr: {
+                heading: "Sélectionnez la langue, le pays et recherchez des emplois",
+                language: "Langue:",
+                country: "Pays:",
+                jobTitle: "Titre du poste:",
+                jobLocation: "Lieu:",
+                submit: "Soumettre"
+            }
+        };
+
+        const languageSelector = document.getElementById("language");
+        const heading = document.getElementById("heading");
+        const labels = {
+            language: document.getElementById("language-label"),
+            country: document.getElementById("country-label"),
+            jobTitle: document.getElementById("job-title-label"),
+            jobLocation: document.getElementById("job-location-label"),
+            submit: document.getElementById("submit")
+        };
+
+        languageSelector.addEventListener("change", () => {
+            const selectedLanguage = languageSelector.value;
+            const translation = translations[selectedLanguage];
+
+            heading.textContent = translation.heading;
+            labels.language.textContent = translation.language;
+            labels.country.textContent = translation.country;
+            labels.jobTitle.textContent = translation.jobTitle;
+            labels.jobLocation.textContent = translation.jobLocation;
+            labels.submit.textContent = translation.submit;
+        });
+
+        const submitButton = document.getElementById("submit");
+        submitButton.addEventListener("click", () => {
+            const jobTitle = document.getElementById("job-title").value;
+            const jobLocation = document.getElementById("job-location").value;
+            alert(`Searching for: ${jobTitle} in ${jobLocation}`);
+        });
+    </script>
+	<script>
+    document.getElementById("submit").addEventListener("click", () => {
+        const jobTitle = document.getElementById("job-title").value;
+        const jobLocation = document.getElementById("job-location").value;
+        
+        if (jobTitle && jobLocation) {
+            alert(`Searching for: ${jobTitle} in ${jobLocation}`);
+            window.location.href = "homepage.html"; // 跳转到 homepage.html
+        } else {
+            alert("Please fill in both Job Title and Location.");
+        }
+    });
+</script>
+
+</body>
+</html>

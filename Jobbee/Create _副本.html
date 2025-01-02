@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobBee - Job Listings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <h1 class="text-xl font-bold">JobBee</h1>
+        <div class="hidden md:flex space-x-8">
+          <a href="homepage.html" class="text-gray-600 hover:text-blue-600">Home</a>
+          <a href="jobfind.html" class="text-gray-600 hover:text-blue-600">Find Job</a>
+          <button class="text-gray-600 hover:text-blue-600 focus:outline-none" onclick="window.location.href='opening .html'">Employers</button>
+          <a href="lastt111  .html" class="text-gray-600 hover:text-blue-600">Social and Contacts</a>
+        </div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-gray-600">+60 102897965</span>
+        <img src="../youtube图标 - Google 搜索_files/unnamed.jpg" alt="User" class="rounded-full">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <nav class="text-sm text-gray-600">
+    </nav>
+  </div>
+
+  <!-- Filter and Sorting -->
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-center items-center space-x-6">
+    <div class="flex items-center space-x-4">
+      <select id="countrySelect" class="border border-gray-300 rounded-lg px-4 py-2">
+        <option value="india" selected>India</option>
+        <option value="usa">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="canada">Canada</option>
+        <option value="australia">Australia</option>
+        <option value="germany">Germany</option>
+      </select>
+      <input id="jobInput" type="text" placeholder="Job title, keyword, company" class="border border-gray-300 rounded-lg px-4 py-2">
+      <button id="findJobButton" class="px-4 py-2 bg-blue-500 text-white rounded-lg" onclick="window.location.href='jobfind.html'">Find Job</button>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <select class="border border-gray-300 rounded-lg px-4 py-2">
+        <option>Latest</option>
+        <option>Oldest</option>
+      </select>
+      <select id="perPage" class="border border-gray-300 rounded-lg px-4 py-2">
+        <option value="12" selected>12 per page</option>
+        <option value="24">24 per page</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Job Listings -->
+  <div id="jobListings" class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Job Cards -->
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Marketing Officer</h2>
+      <p class="text-gray-500">Reddit, United Kingdom</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Senior UX Designer</h2>
+      <p class="text-gray-500">Twitter, Canada</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Software Engineer</h2>
+      <p class="text-gray-500">Facebook, UK</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Product Designer</h2>
+      <p class="text-gray-500">Microsoft, Australia</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Networking Engineer</h2>
+      <p class="text-gray-500">Slack, Germany</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Interaction Designer</h2>
+      <p class="text-gray-500">YouTube, Germany</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Technical Support Specialist</h2>
+      <p class="text-gray-500">Upwork, France</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Data Scientist</h2>
+      <p class="text-gray-500">Google, USA</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Project Manager</h2>
+      <p class="text-gray-500">IBM, India</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Game Developer</h2>
+      <p class="text-gray-500">Epic Games, USA</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Cloud Engineer</h2>
+      <p class="text-gray-500">Amazon, Canada</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">AI Researcher</h2>
+      <p class="text-gray-500">OpenAI, USA</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Machine Learning Engineer</h2>
+      <p class="text-gray-500">DeepMind, UK</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Mobile App Developer</h2>
+      <p class="text-gray-500">Snapchat, USA</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Cybersecurity Analyst</h2>
+      <p class="text-gray-500">Cisco, Germany</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">DevOps Engineer</h2>
+      <p class="text-gray-500">GitHub, USA</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Blockchain Developer</h2>
+      <p class="text-gray-500">Binance, Singapore</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Content Strategist</h2>
+      <p class="text-gray-500">Medium, USA</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Frontend Developer</h2>
+      <p class="text-gray-500">Spotify, Sweden</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Backend Developer</h2>
+      <p class="text-gray-500">Stripe, Ireland</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Data Engineer</h2>
+      <p class="text-gray-500">Netflix, USA</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Business Analyst</h2>
+      <p class="text-gray-500">Accenture, India</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">Quality Assurance Engineer</h2>
+      <p class="text-gray-500">Adobe, USA</p>
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-4 job-card">
+      <h2 class="font-bold text-lg">E-commerce Specialist</h2>
+      <p class="text-gray-500">Alibaba, China</p>
+    </div>
+  </div>
+
+  <script>
+    const perPageSelect = document.getElementById('perPage');
+    const jobCards = document.querySelectorAll('.job-card');
+
+    function updateJobListings() {
+      const perPage = parseInt(perPageSelect.value, 10);
+      jobCards.forEach((card, index) => {
+        if (index < perPage) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    perPageSelect.addEventListener('change', updateJobListings);
+
+    // Initialize view
+    updateJobListings();
+  </script>
+
+</body>
+</html>
+
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom" style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; font-size: 12px; color: #a0a0a0;">
+        &copy; 2024 JobBee - Job Portal. All rights Reserved
+    </div>
+</footer>

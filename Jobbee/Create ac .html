@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobBee Signup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-inter">
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full relative">
+      <div class="flex items-center mb-6">
+        <img src="../截屏2025-01-02 上午8.12.37.png" alt="JobBee Logo" class="rounded-md w-16 h-16">
+        <div class="ml-3">
+          <h1 class="text-2xl font-bold text-gray-800">JobBee</h1>
+        </div>
+        <div class="ml-auto">
+          <select class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-md border">
+            <option value="Employer">Employer</option>
+            <option value="Employed">Employed</option>
+          </select>
+        </div>
+      </div>
+      <form id="signupForm">
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="block text-sm text-gray-700">Full Name</label>
+            <input type="text" class="mt-1 px-4 py-2 w-full border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Full Name" required>
+          </div>
+          <div>
+            <label class="block text-sm text-gray-700">Username</label>
+            <input type="text" class="mt-1 px-4 py-2 w-full border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Username" required>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm text-gray-700">Email address</label>
+          <input type="email" class="mt-1 px-4 py-2 w-full border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Email address" required>
+        </div>
+        <div class="mb-4 relative">
+          <label class="block text-sm text-gray-700">Password</label>
+          <input type="password" id="password" class="mt-1 px-4 py-2 w-full border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Password" required>
+          <span class="absolute right-3 top-9 text-gray-500 cursor-pointer" onclick="togglePassword('password')">👁</span>
+        </div>
+        <div class="mb-4 relative">
+          <label class="block text-sm text-gray-700">Confirm Password</label>
+          <input type="password" id="confirmPassword" class="mt-1 px-4 py-2 w-full border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Confirm Password" required>
+          <span class="absolute right-3 top-9 text-gray-500 cursor-pointer" onclick="togglePassword('confirmPassword')">👁</span>
+        </div>
+        <div class="mb-4 flex items-center">
+          <input type="checkbox" id="terms" class="mr-2">
+          <label for="terms" class="text-sm text-gray-700">
+            I've read and agree with your <a href="#" class="text-blue-500 underline">Terms of Services</a>
+          </label>
+        </div>
+        <div class="mb-4">
+          <a href="Forget password.html" class="text-sm text-blue-500 underline">Forgot your Password?</a>
+
+        </div>
+        <button type="button" class="w-full bg-blue-500 text-white py-3 rounded-md font-medium hover:bg-blue-600" onclick="location.href='Sign in .html';">
+    Create Account &rarr;
+</button>
+
+      </form>
+    </div>
+    <!-- Success Message Modal -->
+    <div id="successMessage" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="bg-white p-8 rounded-lg text-center">
+        <h2 class="text-2xl font-bold text-green-500">Successful Registration!</h2>
+        <p class="mt-2 text-gray-600">You have successfully registered your account.</p>
+        <button class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-md" onclick="closeSuccessMessage()">OK</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function togglePassword(fieldId) {
+      const field = document.getElementById(fieldId);
+      field.type = field.type === 'password' ? 'text' : 'password';
+    }
+
+    function validateAndSubmit() {
+      const termsCheckbox = document.getElementById('terms');
+      if (!termsCheckbox.checked) {
+        alert("You must agree to the Terms of Services to register.");
+        return;
+      }
+      showSuccessMessage();
+    }
+
+    function showSuccessMessage() {
+      document.getElementById('successMessage').classList.remove('hidden');
+    }
+
+    function closeSuccessMessage() {
+      document.getElementById('successMessage').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
